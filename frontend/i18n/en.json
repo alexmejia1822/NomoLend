@@ -318,6 +318,8 @@
     "verifiedDesc": "All contracts are verified and published on BaseScan for full transparency",
     "oracleTitle": "Oracle Redundancy",
     "oracleDesc": "Dual price source with on-chain TWAP and Chainlink as fallback for maximum reliability",
+    "deployedContracts": "Deployed Contracts",
+    "deployedContractsSub": "All contracts verified on Base Mainnet",
     "ctaTitle": "Start using NomoLend",
     "ctaDesc": "Lend USDC and earn interest, or deposit collateral and access instant liquidity.",
     "lendUsdc": "Lend USDC",

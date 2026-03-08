@@ -60,7 +60,7 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   const wallet = request.headers.get("x-wallet-address")?.toLowerCase();
-  if (!ADMIN_WALLETS.includes(wallet)) {
+  if (!wallet || !ADMIN_WALLETS.includes(wallet)) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
   }
 

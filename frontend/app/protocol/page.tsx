@@ -8,6 +8,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { useTranslation } from "@/i18n/context";
 import { ProtocolFlow } from "@/components/protocol/ProtocolFlow";
+import { CONTRACTS } from "@/lib/contracts";
 import {
   Landmark,
   BookOpen,
@@ -32,6 +33,7 @@ import {
   CheckCircle2,
   Settings,
   TrendingUp,
+  ExternalLink,
 } from "lucide-react";
 
 /* ------------------------------------------------------------------ */
@@ -578,7 +580,53 @@ export default function ProtocolPage() {
         </GlassCard>
       </motion.section>
 
-      {/* ── 8. CTA ─────────────────────────────────────────────────── */}
+      {/* ── 8. Deployed Contracts ────────────────────────────────── */}
+      <motion.section variants={itemVariants}>
+        <GlassCard padding="md">
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <h2 className="text-lg font-bold text-text-primary mb-1">
+                {t("protocol.deployedContracts")}
+              </h2>
+              <p className="text-text-muted text-sm">
+                {t("protocol.deployedContractsSub")}
+              </p>
+            </div>
+            <Badge variant="success" size="sm">
+              {t("common.verified")}
+            </Badge>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            {Object.entries(CONTRACTS).map(([name, addr]) => (
+              <a
+                key={name}
+                href={`https://basescan.org/address/${addr}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between py-2.5 px-3 rounded-lg bg-bg-secondary hover:bg-white/[0.04] border border-transparent hover:border-border transition-all duration-200 group"
+              >
+                <div className="flex items-center gap-2">
+                  <div className="w-7 h-7 rounded-md bg-accent-blue/10 border border-accent-blue/20 flex items-center justify-center">
+                    <Landmark className="w-3.5 h-3.5 text-accent-blue" />
+                  </div>
+                  <span className="text-sm font-medium text-text-secondary">
+                    {name}
+                  </span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <span className="font-mono text-xs text-text-muted">
+                    {addr.slice(0, 6)}...{addr.slice(-4)}
+                  </span>
+                  <ExternalLink className="w-3.5 h-3.5 text-text-muted group-hover:text-accent-blue transition-colors" />
+                </div>
+              </a>
+            ))}
+          </div>
+        </GlassCard>
+      </motion.section>
+
+      {/* ── 9. CTA ─────────────────────────────────────────────────── */}
       <motion.section variants={itemVariants}>
         <div className="relative overflow-hidden rounded-xl bg-bg-card border border-border p-6 md:p-8">
           <div className="absolute top-0 left-1/4 w-72 h-72 bg-accent-blue/8 rounded-full blur-3xl pointer-events-none" />
