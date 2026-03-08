@@ -8,7 +8,13 @@
 ![OpenZeppelin](https://img.shields.io/badge/OpenZeppelin-5.x-4E5EE4.svg)
 ![Status](https://img.shields.io/badge/Status-Live-brightgreen.svg)
 
-> Peer-to-peer overcollateralized lending protocol on Base (Ethereum L2). Lenders earn fixed interest. Borrowers deposit collateral. No pools. No intermediaries. Each loan is isolated.
+> Decentralized P2P lending protocol built on Base. Lenders earn fixed interest. Borrowers deposit collateral. No pools. No intermediaries. Each loan is isolated.
+
+| | |
+|---|---|
+| **Website** | [https://nomolend.com](https://nomolend.com) |
+| **Docs** | [Documentation](https://github.com/alexmejia1822/NomoLend/tree/main/docs) |
+| **Contracts** | Base Mainnet — [View on BaseScan](https://basescan.org/address/0x356e137F8F93716e1d92F66F9e2d4866C586d9cf) |
 
 ---
 
