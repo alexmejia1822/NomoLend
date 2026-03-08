@@ -13,7 +13,9 @@ export default function Footer() {
           <div className="flex items-center gap-4 text-text-muted text-sm flex-wrap justify-center">
             <a href="https://github.com/alexmejia1822/NomoLend" target="_blank" rel="noopener noreferrer" className="hover:text-text-secondary transition-colors">GitHub</a>
             <span className="text-border">|</span>
-            <a href="https://basescan.org/address/0x356e137F8F93716e1d92F66F9e2d4866C586d9cf" target="_blank" rel="noopener noreferrer" className="hover:text-text-secondary transition-colors">BaseScan</a>
+            <a href="https://github.com/alexmejia1822/NomoLend/tree/main/docs" target="_blank" rel="noopener noreferrer" className="hover:text-text-secondary transition-colors">Docs</a>
+            <span className="text-border">|</span>
+            <a href="https://basescan.org/address/0x356e137F8F93716e1d92F66F9e2d4866C586d9cf" target="_blank" rel="noopener noreferrer" className="hover:text-text-secondary transition-colors">Contracts</a>
             <span className="text-border">|</span>
             <a href="/terms" className="hover:text-text-secondary transition-colors">{t("footer.terms")}</a>
             <span className="text-border">|</span>
