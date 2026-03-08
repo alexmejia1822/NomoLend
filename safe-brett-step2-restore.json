@@ -1,0 +1,47 @@
+{
+  "version": "1.0",
+  "chainId": "8453",
+  "createdAt": 1772983694562,
+  "meta": {
+    "name": "Fix BRETT: Step 2 — Restore Oracle Limits",
+    "description": "Restore max TWAP change to 10% and cooldown to 5 min after BRETT price is corrected"
+  },
+  "transactions": [
+    {
+      "to": "0xc8Fb5BCaC3501E060e6AFb89cd0723BCC98f1e08",
+      "value": "0",
+      "data": "0xd179d79e00000000000000000000000000000000000000000000000000000000000003e8",
+      "contractMethod": {
+        "inputs": [
+          {
+            "name": "bps",
+            "type": "uint256"
+          }
+        ],
+        "name": "setMaxTwapChangeBps",
+        "payable": false
+      },
+      "contractInputsValues": {
+        "bps": "1000"
+      }
+    },
+    {
+      "to": "0xc8Fb5BCaC3501E060e6AFb89cd0723BCC98f1e08",
+      "value": "0",
+      "data": "0x0a1e6145000000000000000000000000000000000000000000000000000000000000012c",
+      "contractMethod": {
+        "inputs": [
+          {
+            "name": "seconds_",
+            "type": "uint256"
+          }
+        ],
+        "name": "setTwapUpdateCooldown",
+        "payable": false
+      },
+      "contractInputsValues": {
+        "seconds_": "300"
+      }
+    }
+  ]
+}

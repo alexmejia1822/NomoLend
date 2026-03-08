@@ -1,0 +1,40 @@
+{
+  "name": "nomolend-protocol",
+  "version": "1.1.0",
+  "description": "Peer-to-peer overcollateralized lending protocol on Base",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat test",
+    "compile": "npx hardhat compile",
+    "deploy": "node scripts/deploy.js",
+    "configure": "node scripts/configureTokens.js && node scripts/configureRouters.js",
+    "bots": "node bots/index.js",
+    "bots:dry": "DRY_RUN=true node bots/index.js",
+    "bots:pm2": "pm2 start bots/ecosystem.config.cjs",
+    "bots:pm2:stop": "pm2 stop bots/ecosystem.config.cjs",
+    "test-panel": "node scripts/test-panel-web.js",
+    "security-check": "node scripts/securityCheck.js"
+  },
+  "keywords": [
+    "defi",
+    "lending",
+    "p2p",
+    "base",
+    "solidity"
+  ],
+  "author": "NomoLend",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.2",
+    "@openzeppelin/contracts": "^5.6.1",
+    "hardhat": "^2.28.6"
+  },
+  "dependencies": {
+    "@safe-global/protocol-kit": "^6.1.2",
+    "@safe-global/types-kit": "^3.0.0",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "firebase-admin": "^13.7.0"
+  }
+}

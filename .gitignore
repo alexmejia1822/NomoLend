@@ -1,0 +1,62 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Environment variables (NEVER commit secrets)
+.env
+.env.*
+!.env.example
+
+# Firebase credentials
+firebase-key.json
+firebase-admin.json
+*-firebase-adminsdk-*.json
+serviceAccountKey.json
+
+# Private keys and certificates
+*.key
+*.pem
+wallet.json
+private-key.json
+
+# Hardhat artifacts and cache
+artifacts/
+cache/
+typechain-types/
+
+# Foundry artifacts
+foundry-out/
+
+# Next.js build output
+.next/
+frontend/.next/
+frontend/out/
+
+# Build artifacts
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Keeper runtime files
+.keeper-heartbeat.json
+
+# Audit packages (contains full source bundles)
+audit-package/
+
+# Keeper bot logs (PM2)
+logs/
+
+# Safe Transaction Builder batch files
+safe-batch-*.json
+
+# Misc
+*.log
+npm-debug.log*
+.vercel

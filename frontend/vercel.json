@@ -1,0 +1,16 @@
+{
+  "crons": [
+    {
+      "path": "/api/bot/update-prices",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/bot/scan-loans",
+      "schedule": "*/2 * * * *"
+    },
+    {
+      "path": "/api/bot/monitor",
+      "schedule": "*/5 * * * *"
+    }
+  ]
+}

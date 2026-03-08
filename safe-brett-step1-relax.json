@@ -1,0 +1,47 @@
+{
+  "version": "1.0",
+  "chainId": "8453",
+  "createdAt": 1772983694560,
+  "meta": {
+    "name": "Fix BRETT: Step 1 — Relax Oracle Limits",
+    "description": "Temporarily raise max TWAP change to 50% and lower cooldown to 1 min so the bot can update BRETT price incrementally"
+  },
+  "transactions": [
+    {
+      "to": "0xc8Fb5BCaC3501E060e6AFb89cd0723BCC98f1e08",
+      "value": "0",
+      "data": "0xd179d79e0000000000000000000000000000000000000000000000000000000000001388",
+      "contractMethod": {
+        "inputs": [
+          {
+            "name": "bps",
+            "type": "uint256"
+          }
+        ],
+        "name": "setMaxTwapChangeBps",
+        "payable": false
+      },
+      "contractInputsValues": {
+        "bps": "5000"
+      }
+    },
+    {
+      "to": "0xc8Fb5BCaC3501E060e6AFb89cd0723BCC98f1e08",
+      "value": "0",
+      "data": "0x0a1e6145000000000000000000000000000000000000000000000000000000000000003c",
+      "contractMethod": {
+        "inputs": [
+          {
+            "name": "seconds_",
+            "type": "uint256"
+          }
+        ],
+        "name": "setTwapUpdateCooldown",
+        "payable": false
+      },
+      "contractInputsValues": {
+        "seconds_": "60"
+      }
+    }
+  ]
+}

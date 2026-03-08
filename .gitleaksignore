@@ -1,0 +1,5 @@
+# False positives: these are public smart contract addresses on Base Mainnet, not secrets
+# TokenValidator contract address (0xe0CA16261405CA12F156E2F3A0B309d9587B9e4D)
+scripts/shared.js:generic-api-key:12
+deployments/base-mainnet.json:generic-api-key:8
+frontend/lib/contracts.ts:generic-api-key:5
